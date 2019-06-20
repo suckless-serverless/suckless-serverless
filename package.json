@@ -1,0 +1,34 @@
+{
+  "name": "suckless-serverless",
+  "version": "1.0.0",
+  "description": "suckless serverless application",
+  "main": "dist/suckless-serverless.cjs.js",
+  "module": "dist/suckless-serverless.ems.js",
+  "sideEffects": false,
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suckless-serverless/suckless-serverless.git"
+  },
+  "keywords": [],
+  "author": "josensanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suckless-serverless/suckless-serverless/issues"
+  },
+  "homepage": "https://github.com/suckless-serverless/suckless-serverless#readme",
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "rollup": "^1.13.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-node-resolve": "^5.0.3",
+    "rollup-plugin-terser": "^5.0.0"
+  },
+  "dependencies": {
+    "arrive": "^2.4.1"
+  }
+}
