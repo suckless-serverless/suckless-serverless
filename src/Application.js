@@ -14,17 +14,22 @@ export default class Application {
   run(root){
     const { containerId, runOnce, hasCointainer } = this
     return new Promise((resolve, reject) => {
-      if(hasCointainer){
-        document.arrive(`#${containerId}`, function () {
-          // 'this' refers to the newly created element
-          if(runOnce) document.unbindArrive(`#${containerId}`)
-          resolve(containerId)
-        })
+      try {
+        if(hasCointainer){
+          document.arrive(`#${containerId}`, function () {
+            // 'this' refers to the newly created element
+            if(runOnce) document.unbindArrive(`#${containerId}`)
+            resolve(containerId)
+          })
+        }
+
+        this.handle(root)
+        // not sure if necessary.
+        if(!hasCointainer) resolve('')
+      } catch(e){
+        reject(e)
       }
 
-      this.handle(root)
-      // not sure if necessary.
-      if(!hasCointainer) resolve('')
     })
   }
 }
