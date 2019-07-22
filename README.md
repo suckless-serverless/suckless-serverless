@@ -1,2 +1,2 @@
 # suckless-serverless
-suckless serverless application
+suckless serverless
