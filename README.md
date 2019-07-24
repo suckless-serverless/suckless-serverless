@@ -19,11 +19,11 @@ import App from './src/App'
 
 //render SSA
 new ReactMenu().run('id')
-				//when it finished rendering a <div id={root} /> 
-			   .then((root) => {
-			   	 //your applications goes HERE
-			   	 ReactDom.render(document.getElementById(root), <App />)
-			   })
+		//when it finished rendering a <div id={root} /> 
+	   .then((root) => {
+	   	 //your applications goes HERE
+	   	 ReactDom.render(document.getElementById(root), <App />)
+	   })
 ```
 
 There is no need to use a react SSA for you react application, you can use an SSA in any JS tecnology
@@ -42,12 +42,12 @@ import App from './src/App.vue'
 
 //render SSA
 new ReactMenu().run('id')
-				//when it finished rendering a <div id={root} /> 
-			   .then((root) => {
-			   	 //your applications goes HERE
-			   	 new Vue({
-			   	 	...,
-			   	 	render: h => h(App)
-			   	 }).$mount('#'+root)
-			   })
+		//when it finished rendering a <div id={root} /> 
+	   .then((root) => {
+	   	 //your applications goes HERE
+	   	 new Vue({
+	   	 	...,
+	   	 	render: h => h(App)
+	   	 }).$mount('#'+root)
+	   })
 ```
